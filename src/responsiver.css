@@ -1,20 +1,93 @@
-@media (max-width: 1160px){  
-    p::before {
-        content: 'I ❤️ YOU';
-        display: block;
+@keyframes adjustnegative {
+    from {
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+    to {
+        margin-right: 0vw;
+        margin-left: 0vw;
     }
 }
 
-@media (max-width: 950px){  
-    p::before {
-        content: 'I ❤️ Y';
-        display: block;
+@keyframes adjustpositive {
+    from {
+        margin-right: 0vw;
+        margin-left: 0vw;
+    }
+    to {
+        margin-right: 1vw;
+        margin-left: 1vw;
     }
 }
 
-@media (max-width: 685px){  
-    p::before {
+@media (max-width: 1295px) {
+    h1.t1::before,
+    h1.t2::before,
+    h1.t3::before {
+        animation: adjustnegative 0.5s ease-in-out forwards;
+    }
+}
+
+@media (min-width: 1296px) {
+    h1.t1::before,
+    h1.t2::before,
+    h1.t3::before {
+        animation: adjustpositive 0.5s ease-in-out forwards;
+    }
+}
+
+@media (max-width: 1238px) {
+    h1.t2::before {
         content: '❤️';
-        display: block;
+    }
+    
+    h1.t1::before,
+    h1.t2::before,
+    h1.t3::before {
+        animation: adjustpositive 0.5s ease-in-out forwards;
+    }
+}
+
+@media (max-width: 983px) {
+    h1.t1::before,
+    h1.t2::before,
+    h1.t3::before {
+        animation: adjustnegative 0.5s ease-in-out forwards;
+    }
+}
+
+@media (max-width: 940px) {
+    h1.t3::before {
+        content: 'U';
+    }
+    
+    h1.t1::before,
+    h1.t2::before,
+    h1.t3::before {
+        animation: adjustpositive 0.5s ease-in-out forwards;
+    }
+}
+
+@media (max-width: 635px) {
+    h1.t1::before,
+    h1.t2::before,
+    h1.t3::before {
+        animation: adjustnegative 0.5s ease-in-out forwards;
+    }
+}
+
+@media (max-width: 607px) {
+    h1.t1::before {
+        content: '';
+    }
+
+    h1.t3::before {
+        content: '';
+    }
+    
+    h1.t1::before,
+    h1.t2::before,
+    h1.t3::before {
+        animation: adjustpositive 0.5s ease-in-out forwards;
     }
 }
