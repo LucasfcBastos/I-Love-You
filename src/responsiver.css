@@ -4,20 +4,26 @@
         margin-left: 1vw;
     }
     to {
-        margin-right: 0vw;
-        margin-left: 0vw;
+        margin-right: -0.5vw;
+        margin-left: -0.5vw;
     }
 }
 
 @keyframes adjustpositive {
     from {
-        margin-right: 0vw;
-        margin-left: 0vw;
+        margin-right: -0.5vw;
+        margin-left: -0.5vw;
     }
     to {
         margin-right: 1vw;
         margin-left: 1vw;
     }
+}
+
+@keyframes adjustSize {
+    0% { font-size: 40vh; }
+    50% { font-size: 35vh; }
+    100% { font-size: 40vh; }
 }
 
 @media (max-width: 1295px) {
@@ -36,7 +42,7 @@
     }
 }
 
-@media (max-width: 1238px) {
+@media (max-width: 1212px) {
     h1.t2::before {
         content: '❤️';
     }
@@ -48,7 +54,7 @@
     }
 }
 
-@media (max-width: 983px) {
+@media (max-width: 984px) {
     h1.t1::before,
     h1.t2::before,
     h1.t3::before {
@@ -56,7 +62,7 @@
     }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 920px) {
     h1.t3::before {
         content: 'U';
     }
@@ -76,18 +82,16 @@
     }
 }
 
-@media (max-width: 607px) {
+@media (max-width: 595px) {
     h1.t1::before {
         content: '';
     }
 
+    h1.t2::before {
+        animation: adjustSize 5s ease-in-out infinite, adjustpositive 0.5s ease-in-out forwards;
+    }
+
     h1.t3::before {
         content: '';
-    }
-    
-    h1.t1::before,
-    h1.t2::before,
-    h1.t3::before {
-        animation: adjustpositive 0.5s ease-in-out forwards;
     }
 }
